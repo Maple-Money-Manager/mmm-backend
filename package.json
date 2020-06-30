@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "start": "index.js",
+    "start": "node index.js",
     "start:dev": "nodemon index.js"
   },
   "repository": {
@@ -15,7 +15,7 @@
   "keywords": [
     "money"
   ],
-  "author": "js7",
+  "author": "JumpStart7",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Maple-Money-Manager/mmm-backend/issues"
