@@ -23,7 +23,9 @@
   "homepage": "https://github.com/Maple-Money-Manager/mmm-backend#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.4"
   },
   "devDependencies": {
     "jest": "^26.1.0",
