@@ -6,6 +6,8 @@ const Records = sequelize.define("records", {
   date: Sequelize.DATEONLY,
 });
 
-sequelize.sync();
+(async () => {
+  await sequelize.sync();
+})();
 console.log("All models were synchronized successfully.");
 module.exports = { Records };
