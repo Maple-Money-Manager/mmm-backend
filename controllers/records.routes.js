@@ -5,7 +5,7 @@ const recordsServices = require("../services/records.services");
 router.post("/save-record", async (req, res) => {
   const { expense, category, date } = req.body;
   try {
-    const result = await recordsServices.saveRecords(expense, category, date);
+    await recordsServices.saveRecords(expense, category, date);
     res.sendStatus(204);
   } catch (err) {
     console.err;
