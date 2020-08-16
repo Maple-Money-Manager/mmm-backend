@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const recordsServices = require("../services/records-service");
+const recordsServices = require("../services/records.services");
 
 router.post("/save-record", async (req, res) => {
   const { expense, category, date } = req.body;
