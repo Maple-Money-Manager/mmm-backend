@@ -1,4 +1,4 @@
-const { Records } = require("../models/records.model");
+const { Records } = require("../models/records.models");
 
 const saveRecords = async (expense, category, date) => {
   try {

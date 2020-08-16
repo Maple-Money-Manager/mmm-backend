@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   res.json("Get is working");
 });
 
-const recordsRouter = require("./controllers/records.route");
+const recordsRouter = require("./controllers/records.routes");
 
 app.use("/records", recordsRouter);
 
