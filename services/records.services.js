@@ -13,6 +13,16 @@ const saveRecords = async (expense, category, date) => {
   }
 };
 
+const getAllRecords = async () => {
+  try {
+    const allRecords = await Records.findAll();
+    return allRecords;
+  } catch (err) {
+    console.err;
+  }
+};
+
 module.exports = {
   saveRecords,
+  getAllRecords,
 };
