@@ -22,7 +22,23 @@ const getAllRecords = async () => {
   }
 };
 
+const updateRecords = async (expense, category, date, id) => {
+  try {
+    const record = await Records.update(
+      {
+        expense,
+        category,
+        date,
+      },
+      { where: { id: id } }
+    );
+    return record;
+  } catch (err) {
+    console.err;
+  }
+};
 module.exports = {
   saveRecords,
   getAllRecords,
+  updateRecords
 };

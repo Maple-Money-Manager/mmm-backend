@@ -23,4 +23,15 @@ router.get("/get_records", async (req, res) => {
   }
 });
 
+router.patch("/:uniqueKey", async (req, res) => {
+  const { expense, category, date, id } = req.body;
+  try {
+    await recordsServices.updateRecords(expense, category, date, id);
+    res.sendStatus(200);
+  } catch (err) {
+    console.err;
+    res.sendStatus(400);
+  }
+});
+
 module.exports = router;
