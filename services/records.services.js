@@ -24,15 +24,14 @@ const getAllRecords = async () => {
 
 const updateRecords = async (expense, category, date, id) => {
   try {
-    const record = await Records.update(
+    await Records.update(
       {
         expense,
         category,
         date,
       },
-      { where: { id: id } }
+      { where: { id } }
     );
-    return record;
   } catch (err) {
     console.err;
   }
