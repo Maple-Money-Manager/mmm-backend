@@ -3,7 +3,7 @@ const { Sequelize, sequelize } = require("../utils/db");
 const Records = sequelize.define("records", {
   expense: Sequelize.FLOAT,
   category: Sequelize.STRING,
-  date: Sequelize.DATEONLY,
+  date: Sequelize.DATE,
 });
 
 (async () => {
