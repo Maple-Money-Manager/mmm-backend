@@ -34,4 +34,15 @@ router.patch("/:uniqueKey", async (req, res) => {
   }
 });
 
+router.delete("/:uniqueKey", async (req, res) => {
+  const id = req.params.uniqueKey;
+  try {
+    const results = await recordsServices.deleteRecord(id);
+    res.status(200).send(results);
+  } catch (err) {
+    console.err;
+    res.sendStatus(400);
+  }
+});
+
 module.exports = router;

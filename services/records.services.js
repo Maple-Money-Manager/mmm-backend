@@ -36,8 +36,25 @@ const updateRecords = async (expense, category, date, id) => {
     console.err;
   }
 };
+
+const deleteRecord = async (inputId) => {
+  try {
+    const chosenRecord = await Records.findOne({
+      where: { id: inputId },
+    });
+    const dateOfRecord = chosenRecord.dataValues.date;
+    const categoryOfRecord = chosenRecord.dataValues.category;
+    await chosenRecord.destroy();
+    return `Record on ${dateOfRecord} in category "${categoryOfRecord}" has been deleted.`;
+  } catch (err) {
+    console.err;
+  }
+  next(err);
+};
+
 module.exports = {
   saveRecords,
   getAllRecords,
-  updateRecords
+  updateRecords,
+  deleteRecord,
 };
